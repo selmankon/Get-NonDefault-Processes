@@ -10,3 +10,5 @@ Nothing special. 😏
 ```
 ./Get-NonDefault-Processes.ps1 -Detail
 ```
+You can also copy lines 5 to 41 and run it by typing `$filteredProcesses | Format-List *` or `$filteredProcesses | Select-Object Name, ExecutablePath, Description | Format-Table -AutoSize`. 
+Sometimes it is a good method to avoid execution policy. (even though it looks funny.)
