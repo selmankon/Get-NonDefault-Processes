@@ -1,5 +1,4 @@
 $blacklistPaths = @(
-    "system32",
     "c:\program files (x86)\microsoft",
     "c:\program files\microsoft",
     "c:\program files\windowsapps",
