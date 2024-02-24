@@ -5,6 +5,6 @@ This PowerShell script detects and lists processes that run on Windows operating
 # Usage
 rly? 😀
 ```
-wget https://raw.githubusercontent.com/selmankon/Get-NonDefault-Processes/main/Get-NonDefault-Processes.ps1
+wget https://raw.githubusercontent.com/selmankon/Get-NonDefault-Processes/main/Get-NonDefault-Processes.ps1 -O Get-NonDefault-Processes.ps1
 .\Get-NonDefault-Processes.ps1
 ```
