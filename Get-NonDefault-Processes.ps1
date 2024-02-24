@@ -1,4 +1,9 @@
+param (
+    [switch]$Detail
+)
+
 $blacklistPaths = @(
+    "system32",
     "c:\program files (x86)\microsoft",
     "c:\program files\microsoft",
     "c:\program files\windowsapps",
@@ -36,4 +41,8 @@ foreach ($process in $processes) {
     }
 }
 
-$filteredProcesses | Format-List *
+if ($Detail) {
+    $filteredProcesses | Format-List *
+} else {
+    $filteredProcesses | Select-Object Name, ExecutablePath, Description | Format-Table -AutoSize
+}
