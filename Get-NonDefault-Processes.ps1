@@ -1,5 +1,6 @@
 param (
-    [switch]$Detail
+    [switch]$Detail,
+    [switch]$Unique
 )
 
 $blacklistPaths = @(
@@ -38,6 +39,10 @@ foreach ($process in $processes) {
             }
         }
     }
+}
+
+if ($Unique) {
+    $filteredProcesses = $filteredProcesses | Group-Object -Property Name | ForEach-Object { $_.Group | Select-Object -First 1 }
 }
 
 if ($Detail) {
