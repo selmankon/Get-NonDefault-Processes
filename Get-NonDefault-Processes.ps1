@@ -1,3 +1,13 @@
+<#
+.SYNOPSIS
+  A script to get all non-default processes on a Windows machine.
+
+.NOTES
+  Version:        1.0
+  Author:         selmankon
+  Creation Date:  2024-02-24
+#>
+
 param (
     [switch]$Detail,
     [switch]$Unique
